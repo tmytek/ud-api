@@ -3,6 +3,8 @@
 ![](https://d2mxuefqeaa7sj.cloudfront.net/s_182B9C2A5F3E602310842AB2F88AFF8B53760ED3CBBBB56826875F966CBAD3F9_1538119421184_Phi-A_to_BBrain_comunication.png)
 
 Both Tx/Rx packets follows the format showed above.
+# Length
+The length is counting from frame header to checksum.
 
 # Cmd type
 

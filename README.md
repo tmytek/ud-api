@@ -3,7 +3,7 @@
 ![](https://d2mxuefqeaa7sj.cloudfront.net/s_182B9C2A5F3E602310842AB2F88AFF8B53760ED3CBBBB56826875F966CBAD3F9_1538119421184_Phi-A_to_BBrain_comunication.png)
 
 Both Tx/Rx packets follows the format showed above.
-The packet length is 9 bytes.
+The packet length is 10 bytes.
 # Length
 The length is counting from frame header to checksum.
 
@@ -17,6 +17,7 @@ The packet returned from UD Box to denote UD recived “correct” command forma
 * Low byte of target frequency in kHz
 * Mid byte of target frequency in kHz
 * High byte of target frequency in kHz
+* Highest byte of target frequency in kHz
 * For the future developed 
 ## 0x02
 ### Function: Set default frequency 
@@ -24,6 +25,7 @@ The packet returned from UD Box to denote UD recived “correct” command forma
 * Low byte of target frequency in kHz
 * Mid byte of target frequency in kHz
 * High byte of target frequency in kHz
+* Highest byte of target frequency in kHz
 * For the future developed 
 
 ## 0xFF

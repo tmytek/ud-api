@@ -41,10 +41,10 @@ The packet response from UD Box to denote UD recived “correct” command forma
 1. Coolterm download https://coolterm.en.lo4d.com/windows
 2. Connect with UART
 3. coolterm > connection > send string > Hex
-4. Send hex UART cmd 
+4. Send hex UART cmd : 
 FF FE 10 02 00 24 F4 00 C0 B5 15 01 20 38 51 01 00 A1
 5. coolterm > view hex
-6. Receive hex UART cmd
+6. Receive hex UART cmd :
 FF FE 08 00 00 00 00 00 00 F8
 7. Check the settings by spectrum analyzer.
 

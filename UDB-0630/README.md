@@ -19,9 +19,32 @@ Programming via Python, C, C++, C##...etc
 - Port: **5025**
 - TCP
 
-## Device Info
+## Quick Link
 
-### Get UDBox SN
+- [Device Info](#device-info)
+  - [Get UDBox SN](#get-udbox-sn)
+  - [Get UD Module SN](#get-ud-module-sn)
+  - [Get HW version](#get-hw-version)
+  - [Get FW verion](#get-fw-verion)
+  - [Get LO Freq Capability](#get-lo-freq-capability)
+  - [Get LO Freq Avilable Range](#get-lo-freq-avilable-range)
+  - [Get All Status](#get-all-status)
+- [System Config](#system-config)
+  - [Get Static IP](#get-static-ip)
+  - [Set Static IP](#set-static-ip)
+- [UD Config](#ud-config)
+  - [Get LO Frequency](#get-lo-frequency)
+  - [Set LO Frequency](#set-lo-frequency)
+  - [Get LO External Config](#get-lo-external-config)
+  - [Set LO External Config](#set-lo-external-config)
+  - [Get Reference Config](#get-reference-config)
+  - [Set Reference Config](#set-reference-config)
+- [License](#license)
+  - [Set License Key](#set-license-key)
+
+### Device Info
+
+#### Get UDBox SN
 
 | **Description**      | Get UDB-0630 SN    |
 |----------------------|--------------------|
@@ -29,15 +52,15 @@ Programming via Python, C, C++, C##...etc
 | **Command**          | GET_UDBOX_SN\r\n   |
 | **Response Example** | UDB-2445031-0630\r\n |
 
-### Get UD module SN
+#### Get UD Module SN
 
-| **Description**      | Get UDB Module part SN    |
+| **Description**      | Get UD module part SN    |
 |----------------------|--------------------|
 | **R/W**              | Read               |
 | **Command**          | GET_MODULE_SN\r\n   |
 | **Response Example** | UDB-2445031-0630\r\n |
 
-### Get HW version
+#### Get HW version
 
 | **Description**      | Get HW version    |
 |----------------------|--------------------|
@@ -45,7 +68,7 @@ Programming via Python, C, C++, C##...etc
 | **Command**          | GET_HW_VER\r\n   |
 | **Response Example** | 2.1.5.0\r\n |
 
-### Get FW verion
+#### Get FW verion
 
 | **Description**      | Get FW version    |
 |----------------------|--------------------|
@@ -53,23 +76,23 @@ Programming via Python, C, C++, C##...etc
 | **Command**          | GET_FW_VER\r\n   |
 | **Response Example** | 1.0.1.0\r\n |
 
-### Get LO Freq Capability
+#### Get LO Freq Capability
 
-| **Description**      | Get LO Freq(Hz) Capability(min, max)    |
+| **Description**      | Get LO freq(Hz) capability(min, max)    |
 |----------------------|--------------------|
 | **R/W**              | Read               |
 | **Command**          | GET_LO_CAPABILITY\r\n   |
 | **Response Example** | 6000000000,30000000000\r\n |
 
-### Get LO Freq Avilable Range
+#### Get LO Freq Available Range
 
-| **Description**      | Get current LO Freq(Hz) Avilable Range(min, max), it can be extended via unlock license    |
+| **Description**      | Get current LO freq(Hz) available range(min, max), it can be extended via unlock license    |
 |----------------------|--------------------|
 | **R/W**              | Read               |
 | **Command**          | GET_LO_RANGE\r\n   |
 | **Response Example** | 6000000000,10000000000\r\n |
 
-### Get All Status
+#### Get All Status
 
 | **Description**      | Get device all status include System, LO, Reference and License     |
 |----------------------|--------------------|
@@ -93,9 +116,9 @@ Programming via Python, C, C++, C##...etc
   - 0x11: verify failed
   - 0x12: read error
 
-## System Config
+### System Config
 
-### Get Static IP
+#### Get Static IP
 
 | **Description**      | Get static IP    |
 |----------------------|--------------------|
@@ -103,7 +126,7 @@ Programming via Python, C, C++, C##...etc
 | **Command**          | GET_STATIC_IP\r\n   |
 | **Response Example** | 192.168.100.113\r\n |
 
-### Set Static IP
+#### Set Static IP
 
 | **Description**      | Set static IP, it needs reboot to makes effect    |
 |----------------------|--------------------|
@@ -112,28 +135,28 @@ Programming via Python, C, C++, C##...etc
 | **Command Example**  | SET_STATIC_IP 192.168.1.1\r\n |
 | **Response Example** | 0\r\n |
 
-## UD Config
+### UD Config
 
-### Get LO Frequency
+#### Get LO Frequency
 
-| **Description**      | Get LO Frequency(Hz)    |
+| **Description**      | Get LO frequency(Hz)    |
 |----------------------|--------------------|
 | **R/W**              | Read               |
 | **Command**          | GET_LO_FREQ\r\n   |
 | **Response Example** | 8500000000\r\n |
 
-### Set LO Frequency
+#### Set LO Frequency
 
-| **Description**      | Set LO Frequency(Hz)    |
+| **Description**      | Set LO frequency(Hz)    |
 |----------------------|--------------------|
 | **R/W**              | Write               |
 | **Command**          | SET_LO_FREQ {Freq}\r\n   |
 | **Command Example**  | SET_LO_FREQ 8500000000\r\n |
 | **Response Example** | 0\r\n |
 
-### Get LO External Config
+#### Get LO External Config
 
-| **Description**      | Get LO external Config    |
+| **Description**      | Get LO external config    |
 |----------------------|--------------------|
 | **R/W**              | Read               |
 | **Command**          | GET_LO_CONFIG\r\n   |
@@ -144,9 +167,9 @@ Programming via Python, C, C++, C##...etc
   - 1: LO internal output
   - 2: LO external input
 
-### Set LO External Config
+#### Set LO External Config
 
-| **Description**      | Set LO external Config    |
+| **Description**      | Set LO external config    |
 |----------------------|--------------------|
 | **R/W**              | Write               |
 | **Command**          | SET_LO_CONFIG {config}\r\n   |
@@ -158,7 +181,7 @@ Programming via Python, C, C++, C##...etc
   - 1: LO internal output
   - 2: LO external input
 
-### Get Reference Config
+#### Get Reference Config
 
 | **Description**      | Get reference clock source/destination config    |
 |----------------------|--------------------|
@@ -173,7 +196,7 @@ Programming via Python, C, C++, C##...etc
   - 3: Ref clock external in 10MHz
   - 4: Ref clock external in 100MHz
 
-### Set Reference Config
+#### Set Reference Config
 
 | **Description**      | Set reference clock source/destination config    |
 |----------------------|--------------------|
@@ -189,17 +212,9 @@ Programming via Python, C, C++, C##...etc
   - 3: Ref clock external in 10MHz
   - 4: Ref clock external in 100MHz
 
-### Get
+### License
 
-| **Description**      | Get     |
-|----------------------|--------------------|
-| **R/W**              | Read               |
-| **Command**          | \r\n   |
-| **Response Example** | \r\n |
-
-## License
-
-### Set License Key
+#### Set License Key
 
 | **Description**      | Set license key    |
 |----------------------|--------------------|

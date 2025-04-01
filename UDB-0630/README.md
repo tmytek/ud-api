@@ -27,11 +27,19 @@ Programming via Python, C, C++, C##...etc
   - [Get HW version](#get-hw-version)
   - [Get FW verion](#get-fw-verion)
   - [Get LO Freq Capability](#get-lo-freq-capability)
-  - [Get LO Freq Avilable Range](#get-lo-freq-avilable-range)
+  - [Get LO Freq Available Range](#get-lo-freq-available-range)
   - [Get All Status](#get-all-status)
 - [System Config](#system-config)
   - [Get Static IP](#get-static-ip)
   - [Set Static IP](#set-static-ip)
+  - [Get Subnet Mask](#get-subnet-mask)
+  - [Set Subnet Mask](#set-subnet-mask)
+  - [Get Gateway IP](#get-gateway-ip)
+  - [Set Gateway IP](#set-gateway-ip)
+  - [Get IP Mode](#get-ip-mode)
+  - [Set IP Mode](#set-ip-mode)
+  - [System Reboot](#system-reboot)
+  - [System Preset](#system-preset)
 - [UD Config](#ud-config)
   - [Get LO Frequency](#get-lo-frequency)
   - [Set LO Frequency](#set-lo-frequency)
@@ -133,6 +141,81 @@ Programming via Python, C, C++, C##...etc
 | **R/W**              | Write               |
 | **Command**          | SET_STATIC_IP {IP}\r\n   |
 | **Command Example**  | SET_STATIC_IP 192.168.1.1\r\n |
+| **Response Example** | 0\r\n |
+
+#### Get Subnet Mask
+
+| **Description**      | Get subnet mask    |
+|----------------------|--------------------|
+| **R/W**              | Read               |
+| **Command**          | GET_SUBNET_MASK\r\n   |
+| **Response Example** | 255.255.255.0\r\n |
+
+#### Set Subnet Mask
+
+| **Description**      | Set subnet mask, it needs reboot to makes effect    |
+|----------------------|--------------------|
+| **R/W**              | Write               |
+| **Command**          | SET_SUBNET_MASK {mask}\r\n   |
+| **Command Example**  | SET_SUBNET_MASK 255.255.255.0\r\n |
+| **Response Example** | 0\r\n |
+
+#### Get Gateway IP
+
+| **Description**      | Get gateway IP    |
+|----------------------|--------------------|
+| **R/W**              | Read               |
+| **Command**          | GET_GATEWAY\r\n   |
+| **Response Example** | 192.168.100.254\r\n |
+
+#### Set Gateway IP
+
+| **Description**      | Set gateway IP, it needs reboot to makes effect    |
+|----------------------|--------------------|
+| **R/W**              | Write               |
+| **Command**          | SET_GATEWAY {gateway}\r\n   |
+| **Command Example**  | SET_GATEWAY 192.168.100.254\r\n |
+| **Response Example** | 0\r\n |
+
+#### Get IP Mode
+
+| **Description**      | Get IP obtain mode, obtaining IP from DHCP or Static IP    |
+|----------------------|--------------------|
+| **R/W**              | Read               |
+| **Command**          | GET_IP_MODE\r\n   |
+| **Response Example** | 0\r\n |
+
+- IP Mode
+  - DHCP
+  - Static IP
+
+#### Set IP Mode
+
+| **Description**      | Set gateway IP, it needs reboot to makes effect    |
+|----------------------|--------------------|
+| **R/W**              | Write               |
+| **Command**          | SET_IP_MODE {ip_mode}\r\n   |
+| **Command Example**  | SET_IP_MODE 0\r\n |
+| **Response Example** | 0\r\n |
+
+- IP Mode
+  - DHCP
+  - Static IP
+
+#### System Reboot
+
+| **Description**      | Reboot the system   |
+|----------------------|--------------------|
+| **R/W**              | Write               |
+| **Command**          | SYS_REBOOT\r\n   |
+| **Response Example** | N/A |
+
+#### System Preset
+
+| **Description**      | Recovery to RF/UD default config only   |
+|----------------------|--------------------|
+| **R/W**              | Write               |
+| **Command**          | SYS_PRESET\r\n   |
 | **Response Example** | 0\r\n |
 
 ### UD Config
